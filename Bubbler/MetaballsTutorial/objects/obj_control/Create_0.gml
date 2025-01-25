@@ -19,9 +19,10 @@ function Ball(xx, yy, size) constructor                        //Constructor fun
 balls = ds_list_create();                                      //Create list of ball structs
 len = 0;                                                       //Variable to store number of balls
 
+/*
 ds_list_add(balls, new Ball(room_width/2, room_height/2, 64)); //Create a ball at the room center
 ds_list_add(balls, new Ball(mouse_x, mouse_y, 64));            //Create a ball at the mouse position
-
+*/
 
 //////////////////////////////////////////////////////////////////
 
