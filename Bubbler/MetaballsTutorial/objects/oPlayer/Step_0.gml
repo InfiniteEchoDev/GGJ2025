@@ -24,16 +24,22 @@ rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv);
 rh_axis = -input_value("aim_left") + input_value("aim_right");
 rv_axis = -input_value("aim_up") + input_value("aim_down");
 
-wandRadius = 100*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
+wandRadius = 200*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
+
+if (abs(wandRadius )> 5) and (alarm[0] <= 0) {
+	
+	 alarm[0] = 1*room_speed;
+}
 
 
-wandAngle =  point_direction( x + rh_axis *1000,  y + rv_axis*1000, x, y  );
-
-
-wandX = x +rh_axis*100;
-wandY = y + rv_axis*100;
+wandAngleInDegrees =  point_direction(  x, y , x + rh_axis*100,  y - rv_axis*100 );
 
 /*
-wandX = x + wandRadius*dcos(wandAngle);
-wandY = y - wandRadius*dsin(wandAngle);
+wandX = x + rh_axis*100;
+wandY = y + rv_axis*100;
 */
+
+wandX = x+ wandRadius*dcos(wandAngleInDegrees);
+wandY = y + wandRadius*dsin(wandAngleInDegrees);
+
+ 
