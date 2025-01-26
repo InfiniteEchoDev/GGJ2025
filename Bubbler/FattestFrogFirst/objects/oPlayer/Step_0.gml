@@ -1,28 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
- x += mySpeed*( -input_value("left", player) + input_value("right", player));
-
- y += mySpeed*(-input_value("up", player) + input_value("down", player));
- 
-  // stay in the room!
- var edgeBuffer = 32;
- x = clamp(x, 0 + edgeBuffer, room_width - edgeBuffer);
+x += mySpeed*( -input_value("left", player) + input_value("right", player));
+y += mySpeed*(-input_value("up", player) + input_value("down", player));
+   
+// stay in the room!
+var edgeBuffer = 32;
+x = clamp(x, 0 + edgeBuffer, room_width - edgeBuffer);
 y = clamp(y, 0+ edgeBuffer, room_height - edgeBuffer);
- 
- /*
-rh_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrh);
-rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv); 
-*/
 
-
-/*
-   aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
-            aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
-            aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
-            aim_right: input_binding_gamepad_axis(gp_axisrh, false),
-
-*/
 
 rh_axis = -input_value("aim_left", player) + input_value("aim_right", player);
 rv_axis = -input_value("aim_up", player) + input_value("aim_down", player);
@@ -84,22 +70,23 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
 
         
         // Create a new Bubble or add to currently-creating Bubble
-        // TODO: Add to currently-creating Bubble
-        tempBubbleF = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
+        if( currentBubbleFramework == noone ) {
+            currentBubbleFramework = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
 	
-	    tempBubbleF.playerNum = player; 
-	
-		if (player == 1) {
-	
-			tempBubbleF.image_blend = c_green;
-		}
-	    tempBubbleF.radius = wandRadius;
+      	    currentBubbleFramework.playerNum = player; 
+      	
+      		if (player == 1) {
+      			currentBubbleFramework.image_blend = c_green;
+      		}
+        }
+	    currentBubbleFramework.radius = wandRadius;
 	
 	    var bubbleScale = abs(wandRadius)/maxRadius;
-	    tempBubbleF.image_xscale = bubbleScale;
-	    tempBubbleF.image_yscale = bubbleScale;
+	    currentBubbleFramework.image_xscale = bubbleScale;
+	    currentBubbleFramework.image_yscale = bubbleScale;
 
 
+        currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius * 1.5 );
         // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
 
 
