@@ -10,7 +10,17 @@ if (instance_exists(closestFly)) {
 	
 	if (frogEvolutionStage < 5) {
 		
-		frogEvolutionStage++;
+		insectsEaten++;
+		
+		if (insectsEaten >= insectsBeforeEvolution) {
+			frogEvolutionStage++;
+			insectsEaten = 0;
+			// evolution will require more flies eaten next time
+			insectsBeforeEvolution = 1 + frogEvolutionStage;
+			
+			 myState = stateGrowing;
+			 
+		}
 	}
 	
 }

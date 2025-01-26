@@ -1,6 +1,6 @@
 /// @desc Inititalize variables
 
-if (live_call()) return live_result; // GameMaker Live
+//if (live_call()) return live_result; // GameMaker Live
 
 size = 16; //32;                                                     //Grid size
 

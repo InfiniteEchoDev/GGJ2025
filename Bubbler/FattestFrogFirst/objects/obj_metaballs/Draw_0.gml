@@ -1,6 +1,6 @@
 /// @desc Visualize field
 
-if (live_call()) return live_result; // GameMaker Live
+//if (live_call()) return live_result; // GameMaker Live
 
 function Vector2(xx, yy) constructor                                      //Constructor function to make new 2d vector struct
 {

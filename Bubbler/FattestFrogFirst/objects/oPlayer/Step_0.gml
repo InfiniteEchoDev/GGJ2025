@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
- x += mySpeed*( -input_value("left") + input_value("right"));
+ x += mySpeed*( -input_value("left", player) + input_value("right", player));
 
- y += mySpeed*(-input_value("up") + input_value("down"));
+ y += mySpeed*(-input_value("up", player) + input_value("down", player));
  
- 
+  // stay in the room!
+ var edgeBuffer = 32;
+ x = clamp(x, 0 + edgeBuffer, room_width - edgeBuffer);
+y = clamp(y, 0+ edgeBuffer, room_height - edgeBuffer);
  
  /*
 rh_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrh);
@@ -21,8 +24,8 @@ rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv);
 
 */
 
-rh_axis = -input_value("aim_left") + input_value("aim_right");
-rv_axis = -input_value("aim_up") + input_value("aim_down");
+rh_axis = -input_value("aim_left", player) + input_value("aim_right", player);
+rv_axis = -input_value("aim_up", player) + input_value("aim_down", player);
 
 wandRadius = wandLength*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
 
@@ -105,3 +108,15 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
         lastBubbleCreatedPoint.Copy( wandCentrePos );
     }
 }
+
+
+/////////////////////////////////////////
+// floating movement. Ideally for body only, not the wand
+ curvePercent += 1/50;
+  if (curvePercent > 1.0) {
+	curvePercent = 0;	 
+ }
+ 
+ y += 0.1*animcurve_channel_evaluate(curve, curvePercent );
+ image_yscale = myScale + 0.01*animcurve_channel_evaluate(curve, curvePercent );
+  
