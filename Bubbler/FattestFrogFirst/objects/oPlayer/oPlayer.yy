@@ -35,6 +35,7 @@
     {"$GMObjectProperty":"v1","%Name":"wandLength","filters":[],"listItems":[],"multiselect":false,"name":"wandLength","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"playerRadius","filters":[],"listItems":[],"multiselect":false,"name":"playerRadius","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"30","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"createBubbleCooldownMS","filters":[],"listItems":[],"multiselect":false,"name":"createBubbleCooldownMS","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".25","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"curvePercent","filters":[],"listItems":[],"multiselect":false,"name":"curvePercent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
