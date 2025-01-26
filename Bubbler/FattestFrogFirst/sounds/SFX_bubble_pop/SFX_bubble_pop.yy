@@ -12,8 +12,8 @@
   "duration":0.656803,
   "name":"SFX_bubble_pop",
   "parent":{
-    "name":"Scribble",
-    "path":"folders/Scribble.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
