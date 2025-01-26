@@ -25,6 +25,14 @@ if (instance_exists(oFly) ) {
 			alarm[1] = 0.5*room_speed;
 	
 			image_index = 1;
+			
+			if (frogEvolutionStage > 4) {
+				audio_play_sound(SFX_frog_tongue_large, 20,0);
+			} else if (frogEvolutionStage > 2) {
+				audio_play_sound(SFX_frog_tongue_medium, 20,0);
+			} else  {
+				audio_play_sound(SFX_frog_tongue_small, 20,0);
+			}
 	
 			break;
 		}

@@ -19,6 +19,7 @@ if (instance_exists(closestFly)) {
 			insectsBeforeEvolution = 1 + frogEvolutionStage;
 			
 			 myState = stateGrowing;
+			 audio_play_sound(SFX_frog_grow, 20,0);
 			 
 		}
 	}

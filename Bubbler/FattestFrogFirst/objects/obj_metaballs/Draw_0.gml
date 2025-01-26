@@ -2,6 +2,8 @@
 
 //if (live_call()) return live_result; // GameMaker Live
 
+var bubbleShines = 0;
+
 function Vector2(xx, yy) constructor                                      //Constructor function to make new 2d vector struct
 {
 	x = xx;
@@ -66,6 +68,13 @@ for (var i = 0; i < width-1; i++;)                                        //Stop
 			case 1:                                                       //Same case for 1 and 14
 			case 14:
 				draw_line_width(c.x,c.y,d.x,d.y,w);                       //Draw line between points
+			 
+				var bubX = c.x + (  d.x - c.x)/2;
+				var bubY = c.y + ( d.y-c.y)/2;
+				if (bubbleShines == 0) {
+					draw_sprite_ext(Bubble_Sheen_1rotated, 0, bubX, bubY,0.20,0.2,0,c_white,0.3);
+					bubbleShines++;	
+				}
 			//	draw_circle(d.x,d.y,(w/2)*m,false);                       //Draw circle at end point
 				break;
 			case 2:

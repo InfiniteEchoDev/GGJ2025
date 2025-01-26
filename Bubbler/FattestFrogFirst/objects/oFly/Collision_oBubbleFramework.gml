@@ -11,6 +11,8 @@
 	
 	capturedByPlayerNum = other.playerNum;
 	
+	image_blend = c_fuchsia;
+	
  }
  
  if (x < other.x) {

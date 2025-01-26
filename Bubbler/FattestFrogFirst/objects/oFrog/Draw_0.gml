@@ -18,6 +18,7 @@ switch(frogEvolutionStage) {
 		break;
 	case 1:
 		frogColourSprite = GGJ2025_FROG_B2;
+		
 		break;
 	case 2:
 		frogColourSprite = GGJ2025_FROG_B3;
@@ -29,6 +30,10 @@ switch(frogEvolutionStage) {
 		frogColourSprite = GGJ2025_FROG_B5;
 		break;
 	case 5:
+		var gameOver = instance_create_depth(room_width/2,0,-1000,oGameOverWinner);
+		
+		gameOver.winner = myPlayerNumSide;
+		
 		frogColourSprite = GGJ2025_FROG_B5;
 		break;
 	default:
