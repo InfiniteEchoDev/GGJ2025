@@ -1,5 +1,15 @@
+
+draw_set_halign(fa_center);
+
+
+//var strTitle = "Fattest Frog First!";
+ scribble_color_set("frog",c_lime);
+ //scribble_font_set_halign_offset(fTitle,fa_center,0);
+// scribble_font_set_default(fTitle);
+scribble("[wave][frog][scale, 4]Fattest Frog First![/wave]").draw(375, 150);
+
 var _string = "";
-_string += "Multiplayer Example\n";
+_string += "Multiplayer Setup\n";
 _string += "\n";
 
 if (!input_player_connected(0))
@@ -36,7 +46,7 @@ if (input_player_connected(0))
 {
     _string += "\n";
     //_string += "Player 1: Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
-    _string += " Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
+    _string += "Player 1:  Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
 }
 
-draw_text(10, 10, _string);
+draw_text(room_width/2, 400, _string);

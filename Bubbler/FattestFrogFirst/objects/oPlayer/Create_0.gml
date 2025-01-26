@@ -52,8 +52,14 @@ y = room_height/2;
 mySpeed = 15;
 
 myScale = 0.2;
-image_xscale = myScale;
-image_yscale = myScale;
+ image_yscale = myScale;
+ if (image_xscale > 0) {
+	image_xscale = myScale;
+ } else {
+	 image_xscale = -myScale;
+ }
+curve = animcurve_get_channel(AnimationCurvePlayer, "curve1");
+
 
 player = 0;
 
