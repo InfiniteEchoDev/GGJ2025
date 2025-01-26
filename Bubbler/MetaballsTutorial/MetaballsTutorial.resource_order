@@ -44,8 +44,8 @@
     {"name":"Backgrounds","order":4,"path":"folders/Sprites/Backgrounds.yy",},
     {"name":"Environment","order":7,"path":"folders/Sprites/Environment.yy",},
     {"name":"frogs","order":8,"path":"folders/Sprites/frogs.yy",},
-    {"name":"player","order":9,"path":"folders/Sprites/player.yy",},
     {"name":"Insects","order":5,"path":"folders/Sprites/Insects.yy",},
+    {"name":"player","order":9,"path":"folders/Sprites/player.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"AnimationCurve1","order":3,"path":"animcurves/AnimationCurve1/AnimationCurve1.yy",},
