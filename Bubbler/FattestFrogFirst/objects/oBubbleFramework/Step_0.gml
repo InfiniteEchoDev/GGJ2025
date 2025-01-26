@@ -1,4 +1,4 @@
-if (myCapturedInsect == noone){ 
+if (myCapturedInsect == noone) { 
     if (timeToFadeOut == true) {
 
         if (radius > 0) {
