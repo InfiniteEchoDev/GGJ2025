@@ -78,7 +78,29 @@ wandTransverseSpeed = abs( wandSpeedVec.Dot( wandNormal ) );
 
 if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreatesBubble ) {
     if( wandCentrePos.SqrDistance( lastBubbleCreatedPoint ) > createNewBubbleDistSqr && current_time > afterTimeCanCreateBubble ) {
-        ds_list_add(obj_control.balls, new obj_control.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
+
+        
+        // Create a new Bubble or add to currently-creating Bubble
+        // TODO: Add to currently-creating Bubble
+        tempBubbleF = instance_create_depth(wandHalfwayX, wandHalfwayY, 5, oBubbleFramework);
+	
+	    tempBubbleF.playerNum = player; 
+	
+		if (player == 1) {
+	
+			tempBubbleF.image_blend = c_green;
+		}
+	    tempBubbleF.radius = wandRadius;
+	
+	    var bubbleScale = abs(wandRadius)/maxRadius;
+	    tempBubbleF.image_xscale = bubbleScale;
+	    tempBubbleF.image_yscale = bubbleScale;
+
+
+        // ds_list_add(obj_control.balls, new obj_control.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
+
+
+
         afterTimeCanCreateBubble = current_time + createBubbleCooldownMS;
         lastBubbleCreatedPoint.Copy( wandCentrePos );
     }

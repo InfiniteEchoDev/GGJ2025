@@ -29,3 +29,6 @@ ds_list_add(balls, new Ball(mouse_x, mouse_y, 64));            //Create a ball a
 //////////////////////////////////////////////////////////////////
 
 mySpeed = 15;
+
+
+// ds_ballFrameworkObjects = ds_list_create();

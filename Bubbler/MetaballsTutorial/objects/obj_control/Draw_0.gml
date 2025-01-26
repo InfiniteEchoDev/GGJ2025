@@ -20,10 +20,17 @@ draw_set_colour(c_red);
 for (var i = 0; i < len; i++;)                                            //Loop through all balls
 {
 	var b = ds_list_find_value(balls,i);                                  //Reference ball
-	draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
+	if (instance_exists(b)) {
+		draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
+	}
 }
 
-draw_set_colour(c_white);
+if (forPlayer == 0) {
+	draw_set_colour(c_white);
+} else {
+	draw_set_colour(c_lime);
+}
+
 
 //Loop through all grid points
 

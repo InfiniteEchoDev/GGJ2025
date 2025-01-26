@@ -2,6 +2,9 @@
 if (live_call()) return live_result; // GameMaker Live
 
 
+ scr_tallyBallObjs(forPlayer );
+
+
  
 if (ds_list_size(balls) > 0) {
 

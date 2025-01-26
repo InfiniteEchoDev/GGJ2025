@@ -1,7 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description music and more
 
-Mode = "PlayerSetup";
+ 
 
+ 
 
+audio_play_sound(Gameplay_music_WIP1, 1, 1000); 
 
+ 
+ 

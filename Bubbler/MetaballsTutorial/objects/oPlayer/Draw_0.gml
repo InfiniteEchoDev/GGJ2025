@@ -24,10 +24,13 @@ scr_drawDebugText( " wandSpeed: " + string( wandSpeed ),  x, y - 200, 0 );
 scr_drawDebugText( " wandTransverseSpeed: " + string( wandTransverseSpeed ),  x, y - 220, 0 );
 	  
 	  
-	  
-	  
+if (player == 1) {
+	image_blend = c_orange;	 
+}
+	
+	
+draw_self();
 
 //draw_line_width_color(x,y, wandX, wandY, wandWidth, c_purple, c_purple );
 draw_line_width_color(wandClosePos.x, wandClosePos.y, wandFarPos.x, wandFarPos.y, wandWidth, c_purple, c_purple );
 
-draw_self();

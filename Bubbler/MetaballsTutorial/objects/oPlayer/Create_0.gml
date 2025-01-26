@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 function Vector2( xx = 0, yy = 0 ) constructor
 {
     x = xx;
@@ -43,19 +42,18 @@ function Vector2( xx = 0, yy = 0 ) constructor
     {
         return x * otherVec2.x + y * otherVec2.y;
     }
-    
-    static Cross = function( otherVec2, outVec2 )
-    {
-        
-    }
 }
 
-
+/*
 x = room_width/2;
 y = room_height/2;
+*/
 
 mySpeed = 15;
 
+myScale = 0.2;
+image_xscale = myScale;
+image_yscale = myScale;
 
 player = 0;
 
@@ -63,6 +61,7 @@ wandX = x;
 wandY = y;
 
 wandRadius = -1;
+maxRadius = 100;
 
 wandAngle = 0;
 wandAngleInDegrees = 0;
