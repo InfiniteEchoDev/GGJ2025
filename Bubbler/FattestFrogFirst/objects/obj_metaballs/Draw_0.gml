@@ -21,7 +21,7 @@ for (var i = 0; i < len; i++;)                                            //Loop
 {
 	var b = ds_list_find_value(balls,i);                                  //Reference ball
 	if (instance_exists(b)) {
-		draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
+		//draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
 	}
 }
 

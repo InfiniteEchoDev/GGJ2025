@@ -54,7 +54,7 @@ rh_axis = 0;
 rv_axis = 0;
 
 
-mySpeed = 15;
+mySpeed = 8;
 
 myScale = 0.2;
  image_yscale = myScale;

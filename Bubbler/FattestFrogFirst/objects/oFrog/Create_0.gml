@@ -20,7 +20,7 @@ stateSearching = function() {
 	
 		if (alarm[0] == -1) and (alarm[1] == -1) {
 		
-			show_debug_message("resetting time");
+			//show_debug_message("resetting time");
 			alarm[0] = random(tongueTimer);
 		}
 	

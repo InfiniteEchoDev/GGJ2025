@@ -15,7 +15,7 @@ function scr_drawDebugText(argument0, argument1, argument2, argument3) {
 	
 	
 	
-	draw_text(objectX + offset, objectY - offset ,  string(TextToDraw) );
+	//draw_text(objectX + offset, objectY - offset ,  string(TextToDraw) );
 
 
 }

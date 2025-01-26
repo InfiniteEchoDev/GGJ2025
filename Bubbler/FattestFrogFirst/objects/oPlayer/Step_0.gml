@@ -64,6 +64,8 @@ wandSpeedVec.Set( ( wandClosePosDelta.x + wandFarPosDelta.x ) / 2, ( wandClosePo
 wandSpeed = wandSpeedVec.Magnitude();
 wandTransverseSpeed = abs( wandSpeedVec.Dot( wandNormal ) );
 
+//show_debug_message( string( wandNormal ) );
+
 
 if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreatesBubble ) {
     if( wandCentrePos.SqrDistance( lastBubbleCreatedPoint ) > createNewBubbleDistSqr && current_time > afterTimeCanCreateBubble ) {
@@ -78,22 +80,41 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
       		if (player == 1) {
       			currentBubbleFramework.image_blend = c_green;
       		}
+            
+            currentBubbleFramework.maxRadius = wandRadius;
+            currentBubbleFramework.radius = wandRadius;
         }
-	    currentBubbleFramework.radius = wandRadius;
-	
-	    var bubbleScale = abs(wandRadius)/maxRadius;
-	    currentBubbleFramework.image_xscale = bubbleScale;
-	    currentBubbleFramework.image_yscale = bubbleScale;
-
-
-        currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius * 1.5 );
-        // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
-
+        
+        if( instance_exists( currentBubbleFramework ) ) {
+    	    
+    	
+    	    //var bubbleScale = abs(wandRadius)/maxRadius;
+    	    //currentBubbleFramework.image_xscale = bubbleScale;
+    	    //currentBubbleFramework.image_yscale = bubbleScale;
+    
+    
+            currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius * 1.5 );
+            // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
+            
+            //currentBubbleFramework.direction = ( currentBubbleFramework.direction + 
+                //point_direction( wandCentrePos.x, wandCentrePos.y, wandCentrePos.x + wandSpeedVec.x, wandCentrePos.y + wandSpeedVec.y ) ) / ds_list_size( currentBubbleFramework.bubbleSegments );
+            currentBubbleFramework.direction = 
+                point_direction( wandCentrePos.x, wandCentrePos.y, wandCentrePos.x + wandSpeedVec.x, wandCentrePos.y + wandSpeedVec.y );
+            currentBubbleFramework.speed += ( currentBubbleFramework.speed + sqrt( wandTransverseSpeed * wandToBubbleSpeedFactor ) ) / power( ds_list_size( currentBubbleFramework.bubbleSegments ), 2);
+        
+            if( !audio_is_playing( SFX_bubble_wand_loop ) )
+                audio_play_sound(SFX_bubble_wand_loop, 10, 0);
+            
+            if( ds_list_size( currentBubbleFramework.bubbleSegments ) > maxBubbleSegments )
+                currentBubbleFramework = noone;
+        }
 
 
         afterTimeCanCreateBubble = current_time + createBubbleCooldownMS;
         lastBubbleCreatedPoint.Copy( wandCentrePos );
     }
+} else {
+    currentBubbleFramework = noone;
 }
 
 
