@@ -66,8 +66,8 @@
     {"$GMFolder":"","%Name":"Backgrounds","folderPath":"folders/Sprites/Backgrounds.yy","name":"Backgrounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Environment","folderPath":"folders/Sprites/Environment.yy","name":"Environment","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"frogs","folderPath":"folders/Sprites/frogs.yy","name":"frogs","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"player","folderPath":"folders/Sprites/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Insects","folderPath":"folders/Sprites/Insects.yy","name":"Insects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"player","folderPath":"folders/Sprites/player.yy","name":"player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -469,8 +469,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_playersJoin","path":"rooms/rm_playersJoin/rm_playersJoin.yy",},},
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
+    {"roomId":{"name":"rm_playersJoin","path":"rooms/rm_playersJoin/rm_playersJoin.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

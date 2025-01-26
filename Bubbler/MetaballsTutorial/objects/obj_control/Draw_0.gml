@@ -109,3 +109,7 @@ for (var i = 0; i < width-1; i++;)                                        //Stop
 		}
 	}
 }
+
+
+scr_drawDebugText( "num balls: " + string( len ), 0, 0, 0 );
+scr_drawDebugText( "fps: " + string_format( 1 / ( delta_time / 1000000 ), 4, 8 ), 0, 20, 0 );

@@ -7,6 +7,8 @@ size = 16; //32;                                                     //Grid size
 width = 1 + (room_width/size);                                 //Grid width
 height = 1 + (room_height/size);                               //Grid height
 
+bubble_too_far_thresh = size * 3;
+
 grid = ds_grid_create(width,height);                           //Create grid of points
 
 function Ball(xx, yy, size) constructor                        //Constructor function to make new ball struct
