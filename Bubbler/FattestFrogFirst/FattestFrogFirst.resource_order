@@ -67,6 +67,7 @@
   "ResourceOrderSettings":[
     {"name":"AnimationCurve1","order":3,"path":"animcurves/AnimationCurve1/AnimationCurve1.yy",},
     {"name":"AnimationCurve2","order":1,"path":"animcurves/AnimationCurve2/AnimationCurve2.yy",},
+    {"name":"AnimationCurveFlyingIn","order":3,"path":"animcurves/AnimationCurveFlyingIn/AnimationCurveFlyingIn.yy",},
     {"name":"AnimationCurvePlayer","order":2,"path":"animcurves/AnimationCurvePlayer/AnimationCurvePlayer.yy",},
     {"name":"GMLive_fallback","order":1,"path":"extensions/GMLive_fallback/GMLive_fallback.yy",},
     {"name":"scribble_fallback_font","order":16,"path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},
@@ -486,8 +487,10 @@
     {"name":"GGJ2025_FROG_B4","order":5,"path":"sprites/GGJ2025_FROG_B4/GGJ2025_FROG_B4.yy",},
     {"name":"GGJ2025_FROG_B5","order":4,"path":"sprites/GGJ2025_FROG_B5/GGJ2025_FROG_B5.yy",},
     {"name":"sAppleFly","order":1,"path":"sprites/sAppleFly/sAppleFly.yy",},
+    {"name":"sBananaFruitFly","order":4,"path":"sprites/sBananaFruitFly/sBananaFruitFly.yy",},
     {"name":"sBubble_eg","order":2,"path":"sprites/sBubble_eg/sBubble_eg.yy",},
     {"name":"scribble_fallback_bulletpoint","order":15,"path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},
+    {"name":"sFly_AppleFly_ScaleDown","order":3,"path":"sprites/sFly_AppleFly_ScaleDown/sFly_AppleFly_ScaleDown.yy",},
     {"name":"sFly_CarrotCritter","order":2,"path":"sprites/sFly_CarrotCritter/sFly_CarrotCritter.yy",},
   ],
 }
