@@ -47,11 +47,14 @@ if (ds_list_size(balls) > 0) {
 			{
 				var c = ds_list_find_value(balls,k);      //Reference ball
 				var dist = point_distance(xx,yy,c.x,c.y); //Store distance between mid point and ball position
-				sum += c.r/dist;                          //Inverse proportion between radius and distance (high distance and size = small value)
+				if( dist < bubble_too_far_thresh )
+					sum += c.r/(power( dist, 1.55 ));                          //Inverse proportion between radius and distance (high distance and size = small value)
 			}
 		
-			var s = -2; // -1;
-		
+			//var s = -2; // -1;
+			//var s = -1;
+			var s = -1;
+			
 			ds_grid_set(grid,i,j,                         //Set value of grid point
 			sum                                           //Sum of distance
 			+ s);                                         //Reduce size

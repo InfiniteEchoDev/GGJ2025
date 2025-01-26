@@ -24,12 +24,14 @@ rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv);
 rh_axis = -input_value("aim_left") + input_value("aim_right");
 rv_axis = -input_value("aim_up") + input_value("aim_down");
 
-wandRadius = 200*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
+wandRadius = wandLength*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
 
-if (abs(wandRadius )> 5) and (alarm[0] <= 0) {
-	
-	 alarm[0] = 1*room_speed;
-}
+
+
+//if (abs(wandRadius )> 5) and (alarm[0] <= 0) {
+	//
+	 //alarm[0] = 1*room_speed;
+//}
 
 
 wandAngleInDegrees =  point_direction(  x, y , x + rh_axis*100,  y - rv_axis*100 );
@@ -39,7 +41,45 @@ wandX = x + rh_axis*100;
 wandY = y + rv_axis*100;
 */
 
-wandX = x+ wandRadius*dcos(wandAngleInDegrees);
-wandY = y + wandRadius*dsin(wandAngleInDegrees);
+//wandX = x+ wandRadius*dcos(wandAngleInDegrees);
+//wandY = y + wandRadius*dsin(wandAngleInDegrees);
 
  
+
+playerPosPrev.Copy( playerPos );
+playerPos.Set( x, y );
+playerPosDelta.Set( playerPos.x - playerPosPrev.x, playerPos.y - playerPosPrev.y );
+
+wandClosePosPrev.Copy( wandClosePos );
+wandClosePos.Set( 
+    x + dcos( wandAngleInDegrees ) * playerRadius, 
+    y + dsin( wandAngleInDegrees ) * playerRadius
+);
+wandClosePosDelta.Set( wandClosePos.x - wandClosePosPrev.x, wandClosePos.y - wandClosePosPrev.y );
+
+wandFarPosPrev.Copy( wandFarPos );
+wandFarPos.Set( 
+    x + dcos( wandAngleInDegrees ) * ( playerRadius + wandRadius ), 
+    y + dsin( wandAngleInDegrees ) * ( playerRadius + wandRadius )
+);
+wandFarPosDelta.Set( wandFarPos.x - wandFarPosPrev.x, wandFarPos.y - wandFarPosPrev.y );
+
+wandCentrePos.Set( ( wandClosePos.x + wandFarPos.x ) / 2, ( wandClosePos.y + wandFarPos.y ) / 2 );
+
+
+wandNormal.Set( wandClosePos.y - wandFarPos.y, -( wandClosePos.x - wandFarPos.x ) );
+wandNormal.Normalize();
+
+
+wandSpeedVec.Set( ( wandClosePosDelta.x + wandFarPosDelta.x ) / 2, ( wandClosePosDelta.y + wandFarPosDelta.y ) / 2 );
+wandSpeed = wandSpeedVec.Magnitude();
+wandTransverseSpeed = abs( wandSpeedVec.Dot( wandNormal ) );
+
+
+if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreatesBubble ) {
+    if( wandCentrePos.SqrDistance( lastBubbleCreatedPoint ) > createNewBubbleDistSqr && current_time > afterTimeCanCreateBubble ) {
+        ds_list_add(obj_control.balls, new obj_control.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
+        afterTimeCanCreateBubble = current_time + createBubbleCooldownMS;
+        lastBubbleCreatedPoint.Copy( wandCentrePos );
+    }
+}
