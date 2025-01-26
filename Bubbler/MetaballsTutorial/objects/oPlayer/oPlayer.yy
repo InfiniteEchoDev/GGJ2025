@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayer",
-    "path":"sprites/sPlayer/sPlayer.yy",
+    "name":"Fairy_dirty_export",
+    "path":"sprites/Fairy_dirty_export/Fairy_dirty_export.yy",
   },
   "spriteMaskId":null,
   "visible":true,

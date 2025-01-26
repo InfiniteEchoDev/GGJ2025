@@ -35,7 +35,8 @@ else
 if (input_player_connected(0))
 {
     _string += "\n";
-    _string += "Player 1: Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
+    //_string += "Player 1: Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
+    _string += " Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
 }
 
 draw_text(10, 10, _string);

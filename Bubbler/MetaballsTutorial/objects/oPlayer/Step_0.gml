@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
- x += mySpeed*( -input_value("left") + input_value("right"));
+ x += mySpeed*( -input_value("left", player) + input_value("right", player));
 
- y += mySpeed*(-input_value("up") + input_value("down"));
+ y += mySpeed*(-input_value("up", player) + input_value("down", player));
  
  
  
@@ -21,10 +21,10 @@ rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv);
 
 */
 
-rh_axis = -input_value("aim_left") + input_value("aim_right");
-rv_axis = -input_value("aim_up") + input_value("aim_down");
+rh_axis = -input_value("aim_left", player) + input_value("aim_right", player);
+rv_axis = -input_value("aim_up", player) + input_value("aim_down", player);
 
-wandRadius = 200*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
+wandRadius = maxRadius*sqrt(rh_axis*rh_axis + rv_axis*rv_axis);
 
 if (abs(wandRadius )> 5) and (alarm[0] <= 0) {
 	
