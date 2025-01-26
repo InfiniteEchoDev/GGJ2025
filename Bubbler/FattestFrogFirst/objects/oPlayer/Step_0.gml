@@ -76,7 +76,6 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
       	    currentBubbleFramework.playerNum = player; 
       	
       		if (player == 1) {
-      	
       			currentBubbleFramework.image_blend = c_green;
       		}
         }
@@ -87,7 +86,7 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
 	    currentBubbleFramework.image_yscale = bubbleScale;
 
 
-        currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius / 2 );
+        currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius * 1.5 );
         // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
 
 
