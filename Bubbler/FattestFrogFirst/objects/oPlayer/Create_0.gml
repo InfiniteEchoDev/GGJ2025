@@ -49,6 +49,11 @@ x = room_width/2;
 y = room_height/2;
 */
 
+
+rh_axis = 0;
+rv_axis = 0;
+
+
 mySpeed = 15;
 
 myScale = 0.2;
@@ -97,11 +102,9 @@ afterTimeCanCreateBubble = 0;
 lastBubbleCreatedPoint = new Vector2();
 
 
-rh_axis = 0;//gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrh);
-rv_axis = 0;//gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv);
 
-
+currentBubbleFramework = noone;
 
  
  
-alarm[0] = 0.1*room_speed;
+//alarm[0] = 0.1*room_speed;

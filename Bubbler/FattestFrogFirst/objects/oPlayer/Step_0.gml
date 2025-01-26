@@ -6,20 +6,6 @@
  y += mySpeed*(-input_value("up") + input_value("down"));
  
  
- 
- /*
-rh_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrh);
-rv_axis = gamepad_axis_value(myPlayerTruck.playerGamepadSlot, gp_axisrv); 
-*/
-
-
-/*
-   aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
-            aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
-            aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
-            aim_right: input_binding_gamepad_axis(gp_axisrh, false),
-
-*/
 
 rh_axis = -input_value("aim_left") + input_value("aim_right");
 rv_axis = -input_value("aim_up") + input_value("aim_down");
@@ -81,22 +67,24 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
 
         
         // Create a new Bubble or add to currently-creating Bubble
-        // TODO: Add to currently-creating Bubble
-        tempBubbleF = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
+        if( currentBubbleFramework == noone ) {
+            currentBubbleFramework = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
 	
-	    tempBubbleF.playerNum = player; 
-	
-		if (player == 1) {
-	
-			tempBubbleF.image_blend = c_green;
-		}
-	    tempBubbleF.radius = wandRadius;
+      	    currentBubbleFramework.playerNum = player; 
+      	
+      		if (player == 1) {
+      	
+      			currentBubbleFramework.image_blend = c_green;
+      		}
+        }
+	    currentBubbleFramework.radius = wandRadius;
 	
 	    var bubbleScale = abs(wandRadius)/maxRadius;
-	    tempBubbleF.image_xscale = bubbleScale;
-	    tempBubbleF.image_yscale = bubbleScale;
+	    currentBubbleFramework.image_xscale = bubbleScale;
+	    currentBubbleFramework.image_yscale = bubbleScale;
 
 
+        currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius / 2 );
         // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
 
 
