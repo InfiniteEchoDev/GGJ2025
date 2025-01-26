@@ -34,4 +34,4 @@ if (instance_exists(oFly) ) {
 	
 }
 
-show_debug_message("resetting alarmZero");
+//show_debug_message("resetting alarmZero");
