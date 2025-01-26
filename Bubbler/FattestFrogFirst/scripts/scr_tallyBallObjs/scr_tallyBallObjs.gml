@@ -5,7 +5,8 @@ function scr_tallyBallObjs(forPlayer){
  
 	//ds_list_clear(ds_ballFrameworkObjects);
 	
-	ds_list_clear(obj_metaballs.balls);
+    
+	ds_list_clear(balls);
 	
 
 	for (i = 0; i < instance_number(oBubbleFramework); i++)
@@ -26,7 +27,7 @@ function scr_tallyBallObjs(forPlayer){
                 {
                     var bubbleSegment = ds_list_find_value( tempBubbleObj.bubbleSegments, j );
                     //show_debug_message( "bubseg #" + string( j ) + " " + string( bubbleSegment ) );
-                    ds_list_add(obj_metaballs.balls, new Ball(tempBubbleObj.x + bubbleSegment.x, tempBubbleObj.y + bubbleSegment.y, bubbleSegment.r, tempBubbleObj.playerNum ) );
+                    ds_list_add(balls, new Ball(tempBubbleObj.x + bubbleSegment.x, tempBubbleObj.y + bubbleSegment.y, bubbleSegment.r, tempBubbleObj.playerNum ) );
                 }
 				
 			}

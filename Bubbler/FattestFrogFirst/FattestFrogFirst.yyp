@@ -587,6 +587,7 @@
     {"id":{"name":"Gameplay_music_WIP1","path":"sounds/Gameplay_music_WIP1/Gameplay_music_WIP1.yy",},},
     {"id":{"name":"music_gameplay_loop","path":"sounds/music_gameplay_loop/music_gameplay_loop.yy",},},
     {"id":{"name":"SFX_bubble_pop","path":"sounds/SFX_bubble_pop/SFX_bubble_pop.yy",},},
+    {"id":{"name":"SFX_bubble_pop4","path":"sounds/SFX_bubble_pop4/SFX_bubble_pop4.yy",},},
     {"id":{"name":"SFX_bubble_wand_loop","path":"sounds/SFX_bubble_wand_loop/SFX_bubble_wand_loop.yy",},},
     {"id":{"name":"SFX_frog_grow","path":"sounds/SFX_frog_grow/SFX_frog_grow.yy",},},
     {"id":{"name":"SFX_frog_shrink","path":"sounds/SFX_frog_shrink/SFX_frog_shrink.yy",},},

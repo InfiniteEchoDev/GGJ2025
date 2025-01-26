@@ -483,6 +483,7 @@
     {"name":"__shd_scribble_bake_shadow","order":3,"path":"shaders/__shd_scribble_bake_shadow/__shd_scribble_bake_shadow.yy",},
     {"name":"music_gameplay_loop","order":5,"path":"sounds/music_gameplay_loop/music_gameplay_loop.yy",},
     {"name":"SFX_bubble_pop","order":4,"path":"sounds/SFX_bubble_pop/SFX_bubble_pop.yy",},
+    {"name":"SFX_bubble_pop4","order":2,"path":"sounds/SFX_bubble_pop4/SFX_bubble_pop4.yy",},
     {"name":"SFX_bubble_wand_loop","order":1,"path":"sounds/SFX_bubble_wand_loop/SFX_bubble_wand_loop.yy",},
     {"name":"SFX_frog_grow","order":2,"path":"sounds/SFX_frog_grow/SFX_frog_grow.yy",},
     {"name":"SFX_frog_shrink","order":3,"path":"sounds/SFX_frog_shrink/SFX_frog_shrink.yy",},
