@@ -82,7 +82,7 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
         
         // Create a new Bubble or add to currently-creating Bubble
         // TODO: Add to currently-creating Bubble
-        tempBubbleF = instance_create_depth(wandHalfwayX, wandHalfwayY, 5, oBubbleFramework);
+        tempBubbleF = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
 	
 	    tempBubbleF.playerNum = player; 
 	
