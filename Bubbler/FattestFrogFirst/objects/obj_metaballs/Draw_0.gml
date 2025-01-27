@@ -28,9 +28,9 @@ for (var i = 0; i < len; i++;)                                            //Loop
 }
 
 if (forPlayer == 0) {
-	draw_set_colour(c_orange);
-} else {
 	draw_set_colour(c_lime);
+} else {
+	draw_set_colour(c_orange);
 }
 
 
