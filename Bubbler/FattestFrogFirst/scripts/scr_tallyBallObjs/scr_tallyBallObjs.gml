@@ -2,11 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_tallyBallObjs(forPlayer){
 
- 
-	//ds_list_clear(ds_ballFrameworkObjects);
-	
-    
-	ds_list_clear(balls);
 	
 
 	for (i = 0; i < instance_number(oBubbleFramework); i++)
@@ -27,7 +22,16 @@ function scr_tallyBallObjs(forPlayer){
                 {
                     var bubbleSegment = ds_list_find_value( tempBubbleObj.bubbleSegments, j );
                     //show_debug_message( "bubseg #" + string( j ) + " " + string( bubbleSegment ) );
-                    ds_list_add(balls, new Ball(tempBubbleObj.x + bubbleSegment.x, tempBubbleObj.y + bubbleSegment.y, bubbleSegment.r, tempBubbleObj.playerNum ) );
+                    
+                    if( bubbleSegment.relatedBall == noone ) {
+                        var newBall = new Ball(tempBubbleObj.x + bubbleSegment.x, tempBubbleObj.y + bubbleSegment.y, bubbleSegment.r, bubbleSegment);
+                        bubbleSegment.relatedBall = newBall;
+                        ds_list_add(balls, newBall);
+                    }
+                    
+                    bubbleSegment.relatedBall.x = tempBubbleObj.x + bubbleSegment.x;
+                    bubbleSegment.relatedBall.y = tempBubbleObj.y + bubbleSegment.y;
+                    bubbleSegment.relatedBall.r = bubbleSegment.r;
                 }
 				
 			}

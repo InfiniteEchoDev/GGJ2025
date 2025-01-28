@@ -5,9 +5,14 @@
 scr_tallyBallObjs(forPlayer );
 
 
- 
-if (ds_list_size(balls) > 0) {
+ballsListSize = ds_list_size( balls ); 
+if (ballsListSize > 0 || doCleanEmptyBalls) {
 
+    if( ballsListSize <= 0 ) {
+        doCleanEmptyBalls = false;
+    } else {
+        doCleanEmptyBalls = true;
+    }
 	/*
 	var gamepadBall = ds_list_find_value(balls,0);    
 
@@ -29,7 +34,7 @@ if (ds_list_size(balls) > 0) {
 
 */
 
-	len = ds_list_size(balls);                            //Update number of balls
+	len = ballsListSize;                            //Update number of balls
 
 	//Loop through all grid points
 
@@ -50,7 +55,7 @@ if (ds_list_size(balls) > 0) {
 			{
 				var c = ds_list_find_value(balls,k);      //Reference ball
 				var dist = point_distance(xx,yy,c.x,c.y); //Store distance between mid point and ball position
-				if( dist < bubble_too_far_thresh )
+				if( dist < metaballInfluenceRange )
 					sum += c.r/(power( dist, 1.55 ));                          //Inverse proportion between radius and distance (high distance and size = small value)
 			}
 		

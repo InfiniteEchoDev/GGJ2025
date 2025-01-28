@@ -75,14 +75,20 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
         if( currentBubbleFramework == noone ) {
             currentBubbleFramework = instance_create_depth(wandCentrePos.x, wandCentrePos.y, 5, oBubbleFramework);
 	
-      	    currentBubbleFramework.playerNum = player; 
+      	    currentBubbleFramework.playerNum = player;
+            for (i = 0; i < instance_number(obj_metaballs); i++)
+            {
+                var obj_metaballInst = instance_find(obj_metaballs,i);
+                if( obj_metaballInst.forPlayer == player )
+                    currentBubbleFramework.obj_metaballParent = obj_metaballInst
+            }
       	
       		if (player == 1) {
       			currentBubbleFramework.image_blend = c_green;
       		}
             
-            currentBubbleFramework.maxRadius = wandRadius;
-            currentBubbleFramework.radius = wandRadius;
+            currentBubbleFramework.maxRadius = wandRadius * 1.5;
+            currentBubbleFramework.radius = wandRadius * 1.5;
         }
         
         if( instance_exists( currentBubbleFramework ) ) {
@@ -93,7 +99,7 @@ if( wandTransverseSpeed > wandSpeedCreatesBubble && wandRadius > wandRadiusCreat
     	    //currentBubbleFramework.image_yscale = bubbleScale;
     
     
-            currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, wandRadius * 1.5 );
+            currentBubbleFramework.AddNewBall( wandCentrePos.x, wandCentrePos.y, currentBubbleFramework.radius );
             // ds_list_add(obj_metaballs.balls, new obj_metaballs.Ball( wandCentrePos.x, wandCentrePos.y, wandRadius/2));
             
             //currentBubbleFramework.direction = ( currentBubbleFramework.direction + 

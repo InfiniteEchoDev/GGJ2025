@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 
-scr_drawDebugText("alarm 0: " + string(alarm[0]), x + 200, y, 10 );
+//scr_drawDebugText("alarm 0: " + string(alarm[0]), x + 200, y, 10 );
 
-scr_drawDebugText("alarm 1: " + string(alarm[1]), x + 200, y, 100 );
+//scr_drawDebugText("alarm 1: " + string(alarm[1]), x + 200, y, 100 );
  
 var colourIndex = 2;
 
