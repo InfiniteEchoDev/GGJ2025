@@ -19,13 +19,13 @@ function getState(a, b, c, d)                                             //Conv
 
 draw_set_colour(c_red);
 
-for (var i = 0; i < len; i++;)                                            //Loop through all balls
-{
-	var b = ds_list_find_value(balls,i);                                  //Reference ball
-	if (instance_exists(b)) {
-		//draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
-	}
-}
+//for (var i = 0; i < len; i++;)                                            //Loop through all balls
+//{
+	//var b = ds_list_find_value(balls,i);                                  //Reference ball
+	//if (instance_exists(b)) {
+		////draw_circle(b.x,b.y,b.r,true);                                        //Draw a circle with the correct position and radius
+	//}
+//}
 
 if (forPlayer == 0) {
 	draw_set_colour(c_lime);
@@ -120,5 +120,5 @@ for (var i = 0; i < width-1; i++;)                                        //Stop
 }
 
 
-scr_drawDebugText( "num balls: " + string( len ), 0, 0, 0 );
-scr_drawDebugText( "fps: " + string_format( 1 / ( delta_time / 1000000 ), 4, 8 ), 0, 20, 0 );
+//scr_drawDebugText( "num balls: " + string( len ), 0, 0, 0 );
+//scr_drawDebugText( "fps: " + string_format( 1 / ( delta_time / 1000000 ), 4, 8 ), 0, 20, 0 );

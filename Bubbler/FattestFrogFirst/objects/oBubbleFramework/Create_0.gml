@@ -5,7 +5,6 @@ maxRadius = 0;
 
 function AddNewBall( xx, yy, radius ) {
     var ball = new obj_metaballs.Ball( xx - x, yy - y, radius );
-    
 
     ds_list_add( bubbleSegments, ball );
     

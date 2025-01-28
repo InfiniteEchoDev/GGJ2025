@@ -37,7 +37,11 @@
     {"$GMObjectProperty":"v1","%Name":"playerNum","filters":[],"listItems":[],"multiselect":false,"name":"playerNum","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"myCapturedInsect","filters":[],"listItems":[],"multiselect":false,"name":"myCapturedInsect","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"timeToFadeOut","filters":[],"listItems":[],"multiselect":false,"name":"timeToFadeOut","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"bubbleLifetime","filters":[],"listItems":[],"multiselect":false,"name":"bubbleLifetime","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".5","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"bubbleLifetime","filters":[],"listItems":[],"multiselect":false,"name":"bubbleLifetime","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"obj_metaballParent","filters":[
+        "GMObject",
+      ],"listItems":[],"multiselect":false,"name":"obj_metaballParent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"fadeOutRadiusPerSecond","filters":[],"listItems":[],"multiselect":false,"name":"fadeOutRadiusPerSecond","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"200","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

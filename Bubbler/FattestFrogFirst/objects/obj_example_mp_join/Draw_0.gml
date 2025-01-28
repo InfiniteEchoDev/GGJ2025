@@ -24,8 +24,8 @@ draw_set_font(fTitle);
 
 var _string = "";
 var _string2 = "";
-_string += "Multiplayer Setup\n";
-_string += "\n";
+//_string += "Multiplayer Setup\n";
+//_string += "\n";
 
 if (!input_player_connected(0))
 {
@@ -69,7 +69,7 @@ if (input_player_connected(0))
 }
 
 draw_set_color(string1colour);
-draw_text(room_width/2, 390, _string);
+draw_text(room_width/2, 0.55*room_height, _string);
 
 
 draw_set_color(c_white);

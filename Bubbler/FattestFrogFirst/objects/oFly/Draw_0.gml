@@ -5,4 +5,4 @@
 draw_self();
 
 
-scr_drawDebugText("capturedBy " + string(capturedByPlayerNum) , x - 24, y, 14);
+//scr_drawDebugText("capturedBy " + string(capturedByPlayerNum) , x - 24, y, 14);
