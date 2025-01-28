@@ -43,8 +43,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Fairy_dirty_export",
-    "path":"sprites/Fairy_dirty_export/Fairy_dirty_export.yy",
+    "name":"fairy_v2_gold",
+    "path":"sprites/fairy_v2_gold/fairy_v2_gold.yy",
   },
   "spriteMaskId":null,
   "visible":true,

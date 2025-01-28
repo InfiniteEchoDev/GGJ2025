@@ -52,10 +52,10 @@ draw_sprite_ext(frogColourSprite,image_index,x,y,frogScale,frogScale,0,c_white,i
 
 if (xTongue != x) {
 	draw_set_color(c_red);
-	var tongueWidth = 8;
+	var tongueWidth = 8 + frogEvolutionStage;
 	draw_line_width(x, y, xTongue, yTongue, tongueWidth);
 
-	circleRadius = 12;
+	circleRadius = 12 + frogEvolutionStage;
 	draw_ellipse(xTongue - circleRadius, yTongue - circleRadius, xTongue + circleRadius, yTongue + circleRadius,  false);
 
 	draw_set_color(c_white);

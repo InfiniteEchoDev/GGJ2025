@@ -43,7 +43,7 @@ stateFlyingIn = function() {
 	  
 	 if (curvePercent > 1.0) {
 		curvePercent = 0;	 
-		myState = stateFloatingAround
+		myState = stateFloatingAround;
 	 }
 
 	 

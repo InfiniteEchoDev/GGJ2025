@@ -24,6 +24,7 @@ draw_set_font(fTitle);
 
 var _string = "";
 var _string2 = "";
+var _string3 = "";
 //_string += "Multiplayer Setup\n";
 //_string += "\n";
 
@@ -63,6 +64,9 @@ if (input_player_connected(0))
     //_string += "Player 1: Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
     _string2 += "Player 1:  Please press and hold \"" + input_verb_get_icon("action") + "\" to play\n";
 	
+	_string3 += "\n\n\n";
+	_string3 += "Controls: Left & Right Joysticks";
+	
 	if (input_player_connected(1) ) {
 		string1colour = c_grey;
 	}
@@ -73,7 +77,10 @@ draw_text(room_width/2, 0.55*room_height, _string);
 
 
 draw_set_color(c_white);
-draw_text(room_width/2, 0.8*room_height, _string2);
+draw_text(room_width/2, 0.75*room_height, _string2);
+
+draw_set_color(c_lime);
+draw_text(room_width/2, 0.75*room_height, _string3);
 
 
 

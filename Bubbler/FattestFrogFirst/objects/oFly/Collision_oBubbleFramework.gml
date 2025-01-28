@@ -13,6 +13,9 @@
 	
 	image_blend = c_fuchsia;
 	
+	curvePercent = 0;	 
+	myState = stateFloatingAround;
+	
  }
  
  if (x < other.x) {
