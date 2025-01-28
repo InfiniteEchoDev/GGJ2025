@@ -492,6 +492,7 @@
     {"name":"SFX_frog_tongue_small","order":8,"path":"sounds/SFX_frog_tongue_small/SFX_frog_tongue_small.yy",},
     {"name":"Bubble_Sheen_1rotated","order":12,"path":"sprites/Bubble_Sheen_1rotated/Bubble_Sheen_1rotated.yy",},
     {"name":"dirty_hands","order":1,"path":"sprites/dirty_hands/dirty_hands.yy",},
+    {"name":"fairy_v2_gold","order":2,"path":"sprites/fairy_v2_gold/fairy_v2_gold.yy",},
     {"name":"FFF_Logo","order":13,"path":"sprites/FFF_Logo/FFF_Logo.yy",},
     {"name":"GGJ2025_FROG_A1","order":1,"path":"sprites/GGJ2025_FROG_A1/GGJ2025_FROG_A1.yy",},
     {"name":"GGJ2025_FROG_B2","order":2,"path":"sprites/GGJ2025_FROG_B2/GGJ2025_FROG_B2.yy",},

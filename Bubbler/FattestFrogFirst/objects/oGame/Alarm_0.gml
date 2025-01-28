@@ -1,10 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Spawn insects when there are none
 
 
-//instance_create_depth(random(room_width), random(room_height), 5, oFly);
-
-
+ 
 var xP = 0.1*room_width + 0.8*random(room_width);
 
 var yP = -0.2*room_height;
@@ -15,10 +12,8 @@ if (random(100) > 50) {
 
 var tempFly = instance_create_depth( yP, xP, 5, oFly);
 
- 
-
-
-var xT = 0.1*room_width + 0.8*random(room_width);
+  
+var xT = 0.15*room_width + 0.75*random(room_width);
 var yT =  0.1*room_height + 0.8*random(room_height);
 
 tempFly.startX = xP;

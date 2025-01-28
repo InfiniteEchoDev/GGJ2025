@@ -23,14 +23,18 @@
 //scr_drawDebugText( " wandSpeed: " + string( wandSpeed ),  x, y - 200, 0 );
 //scr_drawDebugText( " wandTransverseSpeed: " + string( wandTransverseSpeed ),  x, y - 220, 0 );
 	  
-	  
+var wandColour = c_green; //c_purple;
+
 if (player == 1) {
-	image_blend = c_orange;	 
+	//image_blend = c_orange;	
+	image_index = 1;
+	
+	wandColour = make_color_rgb(226,128,29);
 }
 	
 	
 draw_self();
 
 //draw_line_width_color(x,y, wandX, wandY, wandWidth, c_purple, c_purple );
-draw_line_width_color(wandClosePos.x, wandClosePos.y, wandFarPos.x, wandFarPos.y, wandWidth, c_purple, c_purple );
+draw_line_width_color(wandClosePos.x, wandClosePos.y, wandFarPos.x, wandFarPos.y, wandWidth, wandColour, wandColour );
 
